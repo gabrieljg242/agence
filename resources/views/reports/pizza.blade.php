@@ -68,7 +68,7 @@
         options: {
             title: {
                 display: true,
-                text: 'Porcentaje de Gannancias Netas por cada consultor'
+                text: 'Porcentaje de Ganancias Netas por cada consultor'
             }
         }
         });
