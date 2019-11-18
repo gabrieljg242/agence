@@ -1,5 +1,5 @@
 @php
-    function money_format($number){
+    function money_format_pizza($number){
         if(!empty($number)){
             return number_format($number,2,'.','');
         }else{
@@ -20,7 +20,7 @@
         foreach ($desempenho as $key => $item){
             $users                      .= '"' . $item->no_usuario . '"';
             $ganancia_neta              .= $item->ganancia_neta;
-            $ganancia_neta_porcentaje   .= '"' . money_format(($item->ganancia_neta * 100 ) / $ganancia_neta_total) . '"';  
+            $ganancia_neta_porcentaje   .= '"' . money_format_pizza(($item->ganancia_neta * 100 ) / $ganancia_neta_total) . '"';  
             if($key + 1 != count($desempenho)){
                 $users                      .= ',';
                 $ganancia_neta              .= ',';

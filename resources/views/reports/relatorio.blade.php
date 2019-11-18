@@ -1,5 +1,5 @@
 @php
-    function money_format($number){
+    function money_format_pizza($number){
         if(!empty($number)){
             return number_format($number,2,',','.');
         }else{
@@ -24,10 +24,10 @@
         @if ($user != $item->co_usuario && !empty($user))
                     <tr class="table-success">
                         <th scope="col" class="text-right">Totales</th>
-                        <th scope="col" class="text-right">{{ money_format($ganancia_neta) }}</th>
-                        <th scope="col" class="text-right">{{ money_format($costo_fijo) }}</th>
-                        <th scope="col" class="text-right">{{ money_format($comision) }}</th>
-                        <th scope="col" class="text-right">{{ money_format($beneficio) }}</th>
+                        <th scope="col" class="text-right">{{ money_format_pizza($ganancia_neta) }}</th>
+                        <th scope="col" class="text-right">{{ money_format_pizza($costo_fijo) }}</th>
+                        <th scope="col" class="text-right">{{ money_format_pizza($comision) }}</th>
+                        <th scope="col" class="text-right">{{ money_format_pizza($beneficio) }}</th>
                     </tr>
                 </tbody>
             </table>
@@ -63,10 +63,10 @@
         @endif
                 <tr>
                     <th scope="row" class="text-right">{{ $item->year }} - {{ $item->month }}</th>
-                    <td class="text-right">{{ money_format($item->ganancia_neta) }}</td>
-                    <td class="text-right">{{ money_format($item->costo_fijo) }}</td>
-                    <td class="text-right">{{ money_format($item->comision) }}</td>
-                    <td class="text-right">{{ money_format($item->beneficio) }}</td>
+                    <td class="text-right">{{ money_format_pizza($item->ganancia_neta) }}</td>
+                    <td class="text-right">{{ money_format_pizza($item->costo_fijo) }}</td>
+                    <td class="text-right">{{ money_format_pizza($item->comision) }}</td>
+                    <td class="text-right">{{ money_format_pizza($item->beneficio) }}</td>
                 </tr>
 
                 @php
@@ -79,10 +79,10 @@
         @if ($loop->last)
                     <tr class="table-success">
                         <th scope="col" class="text-right">Totales</th>
-                        <th scope="col" class="text-right">{{ money_format($ganancia_neta) }}</th>
-                        <th scope="col" class="text-right">{{ money_format($costo_fijo) }}</th>
-                        <th scope="col" class="text-right">{{ money_format($comision) }}</th>
-                        <th scope="col" class="text-right">{{ money_format($beneficio) }}</th>
+                        <th scope="col" class="text-right">{{ money_format_pizza($ganancia_neta) }}</th>
+                        <th scope="col" class="text-right">{{ money_format_pizza($costo_fijo) }}</th>
+                        <th scope="col" class="text-right">{{ money_format_pizza($comision) }}</th>
+                        <th scope="col" class="text-right">{{ money_format_pizza($beneficio) }}</th>
                     </tr>
                 </tbody>
             </table>

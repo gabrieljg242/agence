@@ -12,3 +12,9 @@
 */
 
 Route::get('/', 'AgenceController@desempenho')->name('desempenho');
+
+//Clear config cache:
+Route::get('/config-cache', function() {
+    $exitCode = Artisan::call('config:cache');
+    return 'Config cache cleared';
+}); 
